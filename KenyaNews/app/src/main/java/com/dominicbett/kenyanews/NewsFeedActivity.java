@@ -3,7 +3,7 @@ package com.dominicbett.kenyanews;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.StrictMode;
-import android.support.v7.app.AppCompatActivity;
+import android.support.*;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -22,6 +22,7 @@ public class NewsFeedActivity extends AppCompatActivity {
     // Class Variables
     private String urlRoot = "https://www.youtube.com/feeds/videos.xml?channel_id=";
     private String channelID = "UCKVsdeoHExltrWMuK0hOWmg"; // KTN TV
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
