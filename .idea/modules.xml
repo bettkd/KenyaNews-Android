@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/KenyaNews/app/src/KenyaNews/KenyaNewsApp.iml" filepath="$PROJECT_DIR$/KenyaNews/app/src/KenyaNews/KenyaNewsApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/KenyaNews/app/src/main/main.iml" filepath="$PROJECT_DIR$/KenyaNews/app/src/main/main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/KenyaNews/app/src/test/test.iml" filepath="$PROJECT_DIR$/KenyaNews/app/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KenyaNews/KenyaNews.iml" filepath="$PROJECT_DIR$/KenyaNews/KenyaNews.iml" group="KenyaNewsTV/KenyaNews" />
+      <module fileurl="file://$PROJECT_DIR$/KenyaNewsTV.iml" filepath="$PROJECT_DIR$/KenyaNewsTV.iml" group="KenyaNewsTV" />
     </modules>
   </component>
 </project>
