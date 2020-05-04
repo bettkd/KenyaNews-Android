@@ -21,7 +21,30 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bd072fe-2297-4ca4-99eb-2cf114657b85" name="Default Changelist" comment="" />
+    <list default="true" id="1bd072fe-2297-4ca4-99eb-2cf114657b85" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/debug/KenyaNews-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/debug/KenyaNews-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/debug/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/release/KenyaNews-release.apk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/release/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/androidTest/java/com/kenyanewstv/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/androidTest/java/com/kenyanewstv/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/RecyclerViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/RecyclerViewAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideolistActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideolistActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideoplayerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideoplayerActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/drawable/bg1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/drawable/bg2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/drawable/ic_share_icon_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/drawable/ic_share_icon_24dp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videolist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videolist.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videoplayer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videoplayer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/layout_videoitem.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/layout_videoitem.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/test/java/com/kenyanewstv/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/test/java/com/kenyanewstv/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,19 +85,22 @@
     </option>
   </component>
   <component name="GenerateSignedApkSettings">
+    <option name="EXPORT_PRIVATE_KEY" value="false" />
     <option name="KEY_STORE_PATH" value="C:\Users\Dominic_Bett\StudioProjects\keystore.jks" />
     <option name="KEY_ALIAS" value="key1" />
     <option name="REMEMBER_PASSWORDS" value="true" />
-    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1aknTUr3IsvpA3J1QOzbOkH6NHO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="AnalyzeApkAction.lastApkPath" value="$PROJECT_DIR$/KenyaNews/build/outputs/apk/debug/KenyaNews-debug.apk" />
     <property name="ApkExportedModule" value="KenyaNews" />
+    <property name="BundleExportedModule" value="KenyaNews" />
     <property name="ExportApk.ApkPath" value="C:\Users\Dominic_Bett\StudioProjects\KenyaNewsTV\KenyaNews" />
-    <property name="ExportApk.BuildVariants" value="debug&#10;release" />
-    <property name="ExportApk.SignV1" value="true" />
-    <property name="ExportApk.SignV2" value="true" />
+    <property name="ExportApk.BuildVariants" value="release" />
     <property name="android.project.structure.last.selected" value="KenyaNews" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
@@ -180,6 +206,19 @@
       <updated>1548191185388</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="masterDetails">
     <states>

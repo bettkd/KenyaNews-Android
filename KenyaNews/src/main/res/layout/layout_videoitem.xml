@@ -1,58 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/parent_layout"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/videoitem_cardview"
-        android:layout_marginBottom="-10dp"
-        card_view:cardElevation="4dp"
-        card_view:cardCornerRadius="30dp"
-        card_view:cardUseCompatPadding="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/thumbnail"
-            android:src="@mipmap/ic_launcher"
-            android:padding="5dp"
-            android:layout_width="70dp"
-            android:layout_height="70dp"/>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dp"
+        card_view:cardCornerRadius="30dp"
+        card_view:cardElevation="4dp"
+        card_view:cardUseCompatPadding="true">
 
         <TextView
             android:id="@+id/video_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:paddingTop="5dp"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="20dp"
             android:layout_toRightOf="@+id/thumbnail"
-            android:fontFamily="@font/proxima_nova_reg"
-            android:text="Placeholder Text"
-            android:maxLines="2"
             android:ellipsize="end"
+            android:fontFamily="@font/proxima_nova_reg"
+            android:maxLines="2"
+            android:paddingTop="5dp"
+            android:text="Placeholder Text"
             android:textColor="#222"
             android:textSize="18sp" />
+
         <TextView
             android:id="@+id/days_elapsed"
-            android:text="Current time"
-            android:layout_gravity="right"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="45dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="30dp"
+            android:text="Current time" />
+
         <TextView
             android:id="@+id/view_count"
-            android:text="1 view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_marginLeft="72dp"
             android:layout_marginTop="45dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="1 view" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:padding="5dp"
+            android:src="@mipmap/ic_launcher" />
     </androidx.cardview.widget.CardView>
 </RelativeLayout>
