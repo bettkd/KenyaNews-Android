@@ -22,36 +22,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bd072fe-2297-4ca4-99eb-2cf114657b85" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KenyaNews/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/debug/KenyaNews-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/debug/KenyaNews-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/debug/output.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/release/KenyaNews-release.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/release/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/androidTest/java/com/kenyanewstv/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/androidTest/java/com/kenyanewstv/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/release/KenyaNews-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/release/KenyaNews-release.aab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/RecyclerViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/RecyclerViewAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideolistActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideolistActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideoplayerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideoplayerActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/drawable/bg1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/drawable/bg2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/drawable/ic_share_icon_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/drawable/ic_share_icon_24dp.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videolist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videolist.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videoplayer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videoplayer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/layout_videoitem.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/layout_videoitem.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/test/java/com/kenyanewstv/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/test/java/com/kenyanewstv/ExampleUnitTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3_API_28" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3a_API_28" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -95,20 +85,31 @@
   </component>
   <component name="ProjectId" id="1aknTUr3IsvpA3J1QOzbOkH6NHO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="AnalyzeApkAction.lastApkPath" value="$PROJECT_DIR$/KenyaNews/build/outputs/apk/debug/KenyaNews-debug.apk" />
     <property name="ApkExportedModule" value="KenyaNews" />
     <property name="BundleExportedModule" value="KenyaNews" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3a_XL_API_28" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-08-10T13:27:10.384Z" />
     <property name="ExportApk.ApkPath" value="C:\Users\Dominic_Bett\StudioProjects\KenyaNewsTV\KenyaNews" />
     <property name="ExportApk.BuildVariants" value="release" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.project.structure.last.selected" value="KenyaNews" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="device.picker.selection" value="SSFE9LHI8HGQLFHQ" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/KenyaNews/src/main/res/drawable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/KenyaNews/build/outputs/apk/debug/KenyaNews-debug.apk" />
+    <property name="project.structure.last.edited" value="SDK Location" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="settings.editor.selected.configurable" value="preferences.updates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -121,18 +122,6 @@
       <recent name="C:\Users\Dominic_Bett\StudioProjects\KenyaNewsTV\KenyaNews\src\main\res\drawable" />
       <recent name="C:\Users\Dominic_Bett\StudioProjects\KenyaNewsTV\KenyaNews\src\main\res\font" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -219,6 +208,59 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="497" y="58" key="#KenyaNews" timestamp="1597173159718">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="497" y="58" key="#KenyaNews/0.0.1536.824/-1920.0.1920.1119@0.0.1536.824" timestamp="1597173159718" />
+    <state x="287" y="144" key="#PSD" timestamp="1597173128017">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="287" y="144" key="#PSD/0.0.1536.824/-1920.0.1920.1119@0.0.1536.824" timestamp="1597173128017" />
+    <state x="362" y="71" key="#Updates" timestamp="1596902148956">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="362" y="71" key="#Updates/0.0.1536.824@0.0.1536.824" timestamp="1596902148956" />
+    <state x="225" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597173270165">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="225" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1920.0.1920.1119@0.0.1536.824" timestamp="1597173270165" />
+    <state x="563" y="197" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1598586913276">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="450" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1595051851744" />
+    <state x="563" y="197" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1598586913276" />
+    <state x="689" y="235" key="FileChooserDialogImpl" timestamp="1598587042340">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="551" y="167" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1119@0.0.1536.824" timestamp="1597173108532" />
+    <state x="689" y="235" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1598587042340" />
+    <state x="278" y="55" key="SettingsEditor" timestamp="1597173067595">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="278" y="55" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1119@0.0.1536.824" timestamp="1597173067595" />
+    <state x="278" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596902364982" />
+    <state x="210" y="169" width="1500" height="823" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1598590118820">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="168" y="120" width="1200" height="584" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.824@0.0.1536.824" timestamp="1597066450414" />
+    <state x="210" y="169" width="1500" height="823" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1598590118820" />
+    <state x="584" y="333" key="com.intellij.ide.util.TipDialog" timestamp="1598885994022">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="466" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1920.0.1920.1119@0.0.1536.824" timestamp="1597173997987" />
+    <state x="466" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1596900867185" />
+    <state x="584" y="333" key="com.intellij.ide.util.TipDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1598885994022" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596902186166">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1596902186166" />
+    <state x="432" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1597173261098">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="432" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1119@0.0.1536.824" timestamp="1597173261098" />
+    <state x="432" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1596902205516" />
   </component>
   <component name="masterDetails">
     <states>

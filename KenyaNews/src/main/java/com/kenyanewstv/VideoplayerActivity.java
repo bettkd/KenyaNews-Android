@@ -10,9 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -20,6 +17,10 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.ColorUtils;
+
+//import com.google.android.gms.ads.AdRequest;
+//import com.google.android.gms.ads.AdView;
+//import com.google.android.gms.ads.MobileAds;
 
 public class VideoplayerActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
@@ -36,7 +37,7 @@ public class VideoplayerActivity extends YouTubeBaseActivity implements YouTubeP
     private ImageView shareVideo;
     private TextView publishedDate;
 
-    private AdView mAdView;
+    //private AdView mAdView;
 
     // Vars
     private String mTVChannelName;
@@ -123,11 +124,11 @@ public class VideoplayerActivity extends YouTubeBaseActivity implements YouTubeP
         initViewHeader(mTVChannelName, mTVColors);
         initVideoPlayerViewContent();
 
-
-        MobileAds.initialize(this, "ca-app-pub-2441030782933536~4703195751");
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        // Implement Ad banner
+        //MobileAds.initialize(this, "ca-app-pub-2441030782933536~4703195751");
+        //mAdView = findViewById(R.id.adView);
+        //AdRequest adRequest = new AdRequest.Builder().build();
+        //mAdView.loadAd(adRequest);
     }
 
     private void getIncomingIntent() {
@@ -144,6 +145,9 @@ public class VideoplayerActivity extends YouTubeBaseActivity implements YouTubeP
             mPublishedDate = HelperUtilities.getShortDateFromLongDate(publishedLongDate);
             mVideoID = getIntent().getStringExtra("videoID");
             mVideoSummary = getIntent().getStringExtra("videoSummary");
+            if (mVideoSummary.trim().isEmpty()) {
+                mVideoSummary = "No description found.";
+            }
         }
     }
 
