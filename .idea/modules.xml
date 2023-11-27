@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/KenyaNews/KenyaNews.iml" filepath="$PROJECT_DIR$/KenyaNews/KenyaNews.iml" group="KenyaNewsTV/KenyaNews" />
-      <module fileurl="file://$PROJECT_DIR$/KenyaNewsTV.iml" filepath="$PROJECT_DIR$/KenyaNewsTV.iml" group="KenyaNewsTV" />
-    </modules>
-  </component>
-</project>
