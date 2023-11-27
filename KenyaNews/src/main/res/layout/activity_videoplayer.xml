@@ -130,12 +130,26 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/video_description"></com.google.android.gms.ads.AdView>
     -->
-    <com.google.android.youtube.player.YouTubePlayerView
+
+    <LinearLayout
         android:id="@+id/youtube_player"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="#222"
-        app:layout_constraintDimensionRatio="h,4:3"
-        app:layout_constraintTop_toBottomOf="@+id/videoplayer_header"></com.google.android.youtube.player.YouTubePlayerView>
+        app:layout_constraintTop_toBottomOf="@+id/videoplayer_header"
+        android:orientation="vertical" >
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:videoId="S0Q4gqBUs7c"
+            app:enableAutomaticInitialization="false"
+            app:autoPlay="true" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

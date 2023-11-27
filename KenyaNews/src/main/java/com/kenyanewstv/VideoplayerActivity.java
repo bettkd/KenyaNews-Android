@@ -3,18 +3,20 @@ package com.kenyanewstv;
 import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+import androidx.annotation.NonNull;
 
-import com.google.android.youtube.player.YouTubeBaseActivity;
-import com.google.android.youtube.player.YouTubeInitializationResult;
-import com.google.android.youtube.player.YouTubePlayer;
-import com.google.android.youtube.player.YouTubePlayerView;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.options.IFramePlayerOptions;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.utils.YouTubePlayerUtils;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.ColorUtils;
 
@@ -22,7 +24,7 @@ import androidx.core.graphics.ColorUtils;
 //import com.google.android.gms.ads.AdView;
 //import com.google.android.gms.ads.MobileAds;
 
-public class VideoplayerActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
+public class VideoplayerActivity extends AppCompatActivity {
 
     private static final String TAG = "VideoplayerActivity";
     private static final String API_KEY = "AIzaSyBkIYCYIUozVohExwejbRadP4Mq-LA5ovc";
@@ -48,6 +50,7 @@ public class VideoplayerActivity extends YouTubeBaseActivity implements YouTubeP
     private String mPublishedDate;
     private String mVideoSummary;
 
+    /*
     private YouTubePlayer.PlaybackEventListener playbackEventListener = new YouTubePlayer.PlaybackEventListener() {
         @Override
         public void onPlaying() {
@@ -68,7 +71,6 @@ public class VideoplayerActivity extends YouTubeBaseActivity implements YouTubeP
         public void onBuffering(boolean b) {
 
         }
-
         @Override
         public void onSeekTo(int i) {
 
@@ -105,20 +107,32 @@ public class VideoplayerActivity extends YouTubeBaseActivity implements YouTubeP
 
         }
     };
-
+*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_videoplayer);
         Log.d(TAG, "onCreate: started.");
 
-        if (android.os.Build.VERSION.SDK_INT > 9) {
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-        }
+        YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
+        getLifecycle().addObserver(youTubePlayerView);
+        YouTubePlayerListener listener = new AbstractYouTubePlayerListener() {
+            @Override
+            public void onReady(@NonNull YouTubePlayer youTubePlayer) {
 
-        YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player);
-        youTubePlayerView.initialize(API_KEY, this);
+                YouTubePlayerUtils.loadOrCueVideo(
+                        youTubePlayer,
+                        getLifecycle(),
+                        mVideoID,
+                        0f
+                );
+            }
+        };
+
+        // disable web ui
+        IFramePlayerOptions options = new IFramePlayerOptions.Builder().controls(0).build();
+
+        youTubePlayerView.initialize(listener, options);
 
         getIncomingIntent();
         initViewHeader(mTVChannelName, mTVColors);
@@ -159,7 +173,6 @@ public class VideoplayerActivity extends YouTubeBaseActivity implements YouTubeP
                 colors);
         headerRecyclerView.setBackground(gradientDrawable);
     }
-
     private void initVideoPlayerViewContent() {
         parentLayout = findViewById(R.id.videoplayer_parentlayout);
         parentLayout.setBackgroundColor(ColorUtils.setAlphaComponent(mTVColors[0], BG_OPACITY_ALPHA));
@@ -192,23 +205,5 @@ public class VideoplayerActivity extends YouTubeBaseActivity implements YouTubeP
                 startActivity(Intent.createChooser(intent, "Sharing via"));
             }
         });
-    }
-
-    @Override
-    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean wasRestored) {
-        // Add listeners
-        youTubePlayer.setPlayerStateChangeListener(playerStateChangeListener);
-        youTubePlayer.setPlaybackEventListener(playbackEventListener);
-
-        // Start buffering
-        if (!wasRestored) {
-            Log.d(TAG, "onInitializationSuccess: Starting video ID: " + mVideoID);
-            youTubePlayer.loadVideo(mVideoID);
-        }
-    }
-
-    @Override
-    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-        Toast.makeText(this, "Failed to initialize video", Toast.LENGTH_SHORT).show();
     }
 }

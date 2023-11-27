@@ -42,7 +42,9 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
     //circle image view
     implementation 'de.hdodenhof:circleimageview:3.0.0'
-    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    // Youtube Player
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0'
+    //implementation files('libs/YouTubeAndroidPlayerApi.jar')
     //Google Ads
     //implementation 'com.google.android.gms:play-services-ads-lite:19.1.0'
 }
