@@ -24,6 +24,25 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:fontFamily="@font/proxima_nova_bold" />
 
+    <LinearLayout
+        android:id="@+id/youtube_player"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#222"
+        app:layout_constraintTop_toBottomOf="@+id/videoplayer_header"
+        android:orientation="vertical" >
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:videoId="S0Q4gqBUs7c"
+            app:enableAutomaticInitialization="false"
+            app:autoPlay="true" />
+    </LinearLayout>
+
     <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/youtubeplayer_videotitle"
@@ -118,7 +137,7 @@
             android:textColor="#222"
             android:textSize="18sp" />
     </androidx.cardview.widget.CardView>
-    <!--
+
     <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
         android:layout_width="match_parent"
@@ -128,28 +147,7 @@
         ads:adSize="SMART_BANNER"
         ads:adUnitId="ca-app-pub-2441030782933536/4320052370"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/video_description"></com.google.android.gms.ads.AdView>
-    -->
-
-    <LinearLayout
-        android:id="@+id/youtube_player"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="#222"
-        app:layout_constraintTop_toBottomOf="@+id/videoplayer_header"
-        android:orientation="vertical" >
-
-        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-            android:id="@+id/youtube_player_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            app:videoId="S0Q4gqBUs7c"
-            app:enableAutomaticInitialization="false"
-            app:autoPlay="true" />
-    </LinearLayout>
-
+        app:layout_constraintTop_toBottomOf="@+id/video_description">
+    </com.google.android.gms.ads.AdView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

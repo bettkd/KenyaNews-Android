@@ -20,9 +20,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.ColorUtils;
 
-//import com.google.android.gms.ads.AdRequest;
-//import com.google.android.gms.ads.AdView;
-//import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 public class VideoplayerActivity extends AppCompatActivity {
 
@@ -38,8 +40,7 @@ public class VideoplayerActivity extends AppCompatActivity {
     private TextView videoSummary;
     private ImageView shareVideo;
     private TextView publishedDate;
-
-    //private AdView mAdView;
+    private AdView mAdView;
 
     // Vars
     private String mTVChannelName;
@@ -138,11 +139,16 @@ public class VideoplayerActivity extends AppCompatActivity {
         initViewHeader(mTVChannelName, mTVColors);
         initVideoPlayerViewContent();
 
+
         // Implement Ad banner
-        //MobileAds.initialize(this, "ca-app-pub-2441030782933536~4703195751");
-        //mAdView = findViewById(R.id.adView);
-        //AdRequest adRequest = new AdRequest.Builder().build();
-        //mAdView.loadAd(adRequest);
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+                    @Override
+                    public void onInitializationComplete(InitializationStatus initializationStatus) {
+                    }
+                });
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     private void getIncomingIntent() {
