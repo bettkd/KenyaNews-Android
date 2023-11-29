@@ -26,9 +26,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1bd072fe-2297-4ca4-99eb-2cf114657b85" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideoplayerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideoplayerActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videoplayer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videoplayer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/release/KenyaNews-release.aab" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,8 +68,8 @@
   </component>
   <component name="GenerateSignedApkSettings">
     <option name="EXPORT_PRIVATE_KEY" value="false" />
-    <option name="KEY_STORE_PATH" value="C:\Users\Dominic_Bett\StudioProjects\keystore.jks" />
-    <option name="KEY_ALIAS" value="key1" />
+    <option name="KEY_STORE_PATH" value="C:\Users\Dominic_Bett\OneDrive - Dell Technologies\Desktop\PROJECTS\APP\keystore1.jsk" />
+    <option name="KEY_ALIAS" value="key0" />
     <option name="REMEMBER_PASSWORDS" value="true" />
   </component>
   <component name="Git.Settings">
@@ -89,10 +87,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "AnalyzeApkAction.lastApkPath": "C:/Users/Dominic_Bett/OneDrive - Dell Technologies/Desktop/PROJECTS/APP/KenyaNews-Android/KenyaNews/build/outputs/apk/debug/KenyaNews-debug.apk",
+    "ApkExportedModule": "KenyaNews-Android.KenyaNews",
     "BundleExportedModule": "KenyaNews-Android.KenyaNews",
     "DEBUGGABLE_DEVICE": "Pixel_7_API_33 [emulator-5554]",
     "DEBUGGABLE_PROCESS": "com.kenyanewstv",
     "DEBUGGER_ID": "Auto",
+    "ExportApk.ApkPathForKenyaNews-Android.KenyaNews": "C:\\Users\\Dominic_Bett\\OneDrive - Dell Technologies\\Desktop\\PROJECTS\\APP\\KenyaNews-Android\\KenyaNews",
+    "ExportBundle.BundlePathForKenyaNews-Android.KenyaNews": "C:\\Users\\Dominic_Bett\\OneDrive - Dell Technologies\\Desktop\\PROJECTS\\APP\\KenyaNews-Android\\KenyaNews",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
@@ -100,12 +101,17 @@
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "C:/Users/Dominic_Bett/OneDrive - Dell Technologies/Desktop/PROJECTS/APP/KenyaNews-Android/KenyaNews/build/outputs/apk/debug/KenyaNews-debug.apk",
+    "last_opened_file_path": "C:/Users/Dominic_Bett/OneDrive - Dell Technologies/Desktop/PROJECTS/APP/deployment_cert.der",
     "project.structure.last.edited": "SDK Location",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "AndroidSdkUpdater",
     "show.migrate.to.gradle.popup": "false"
+  },
+  "keyToStringList": {
+    "ExportApk.BuildVariants": [
+      "release"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
