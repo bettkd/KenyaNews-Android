@@ -4,10 +4,10 @@ android {
     compileSdkVersion 33
     defaultConfig {
         applicationId "com.kenyanewstv"
-        minSdkVersion 24
+        minSdkVersion 31
         targetSdkVersion 33
         versionCode 12
-        versionName "2.1"
+        versionName "2.2"
     }
     buildTypes {
         release {

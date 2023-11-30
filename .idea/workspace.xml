@@ -28,8 +28,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bd072fe-2297-4ca4-99eb-2cf114657b85" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideoPlayerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideoPlayerActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videoplayer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videoplayer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/release/KenyaNews-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/release/KenyaNews-release.aab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,37 +91,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "AnalyzeApkAction.lastApkPath": "C:/Users/Dominic_Bett/OneDrive - Dell Technologies/Desktop/PROJECTS/APP/KenyaNews-Android/KenyaNews/build/outputs/apk/debug/KenyaNews-debug.apk",
-    "ApkExportedModule": "KenyaNews-Android.KenyaNews",
-    "BundleExportedModule": "KenyaNews-Android.KenyaNews",
-    "DEBUGGABLE_DEVICE": "Pixel_7_API_33 [emulator-5554]",
-    "DEBUGGABLE_PROCESS": "com.kenyanewstv",
-    "DEBUGGER_ID": "Auto",
-    "ExportApk.ApkPathForKenyaNews-Android.KenyaNews": "C:\\Users\\Dominic_Bett\\OneDrive - Dell Technologies\\Desktop\\PROJECTS\\APP\\KenyaNews-Android\\KenyaNews",
-    "ExportBundle.BundlePathForKenyaNews-Android.KenyaNews": "C:\\Users\\Dominic_Bett\\OneDrive - Dell Technologies\\Desktop\\PROJECTS\\APP\\KenyaNews-Android\\KenyaNews",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHOW_ALL_PROCESSES": "false",
-    "cidr.known.project.marker": "true",
-    "com.google.services.firebase.aqiPopupShown": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "C:/Users/Dominic_Bett/OneDrive - Dell Technologies/Desktop/PROJECTS/APP/deployment_cert.der",
-    "project.structure.last.edited": "SDK Location",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "AndroidSdkUpdater",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;AnalyzeApkAction.lastApkPath&quot;: &quot;C:/Users/Dominic_Bett/OneDrive - Dell Technologies/Desktop/PROJECTS/APP/KenyaNews-Android/KenyaNews/build/outputs/apk/debug/KenyaNews-debug.apk&quot;,
+    &quot;ApkExportedModule&quot;: &quot;KenyaNews-Android.KenyaNews&quot;,
+    &quot;BundleExportedModule&quot;: &quot;KenyaNews-Android.KenyaNews&quot;,
+    &quot;DEBUGGABLE_DEVICE&quot;: &quot;Pixel_7_API_33 [emulator-5554]&quot;,
+    &quot;DEBUGGABLE_PROCESS&quot;: &quot;com.kenyanewstv&quot;,
+    &quot;DEBUGGER_ID&quot;: &quot;Auto&quot;,
+    &quot;ExportApk.ApkPathForKenyaNews-Android.KenyaNews&quot;: &quot;C:\\Users\\Dominic_Bett\\OneDrive - Dell Technologies\\Desktop\\PROJECTS\\APP\\KenyaNews-Android\\KenyaNews&quot;,
+    &quot;ExportBundle.BundlePathForKenyaNews-Android.KenyaNews&quot;: &quot;C:\\Users\\Dominic_Bett\\OneDrive - Dell Technologies\\Desktop\\PROJECTS\\APP\\KenyaNews-Android\\KenyaNews&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHOW_ALL_PROCESSES&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dominic_Bett/OneDrive - Dell Technologies/Desktop/PROJECTS/APP/deployment_cert.der&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDK Location&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   },
-  "keyToStringList": {
-    "ExportApk.BuildVariants": [
-      "release"
+  &quot;keyToStringList&quot;: {
+    &quot;ExportApk.BuildVariants&quot;: [
+      &quot;release&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Dominic_Bett\StudioProjects\KenyaNewsTV\KenyaNews\src\main\res\mipmap-mdpi" />
