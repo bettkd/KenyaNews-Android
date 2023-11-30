@@ -28,26 +28,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bd072fe-2297-4ca4-99eb-2cf114657b85" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KenyaNews/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/debug/KenyaNews-debug.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/debug/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/androidTest/java/com/kenyanewstv/ExampleInstrumentedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/FeedStreamer.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/FeedStreamer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/HelperUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/HelperUtilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/RecyclerViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/RecyclerViewAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/TVAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/TVAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/TVContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/TVContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideoContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideoContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideolistActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideoListActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideoplayerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideoPlayerActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videolist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videolist.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videoplayer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videoplayer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/src/test/java/com/kenyanewstv/ExampleUnitTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
