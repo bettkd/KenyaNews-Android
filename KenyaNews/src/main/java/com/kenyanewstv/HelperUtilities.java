@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 public class HelperUtilities {
 
@@ -47,7 +48,7 @@ public class HelperUtilities {
         calendar.add(Calendar.DATE, daysElapsed * -1);
         Date date = calendar.getTime();
 
-        DateFormat inputFormat = new SimpleDateFormat("MMM dd, yyyy");
+        DateFormat inputFormat = new SimpleDateFormat("MMM dd, yyyy", Locale.US);
         toReturn = inputFormat.format(date);
 
         return toReturn;
@@ -58,7 +59,7 @@ public class HelperUtilities {
         Date date = new Date();
         date.setTime(longDate);
 
-        DateFormat inputFormat = new SimpleDateFormat("MMM dd, yyyy");
+        DateFormat inputFormat = new SimpleDateFormat("MMM dd, yyyy", Locale.US);
         toReturn = inputFormat.format(date);
 
         return toReturn;

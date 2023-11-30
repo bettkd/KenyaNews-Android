@@ -14,22 +14,12 @@ import androidx.core.graphics.ColorUtils;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class VideolistActivity extends AppCompatActivity {
+public class VideoListActivity extends AppCompatActivity {
+    private static final String TAG = "VideoListActivity";
 
-    private static final String TAG = "VideolistActivity";
-    private int BG_OPACITY_ALPHA = 30;
-
-    //vars
-    private ArrayList<VideoContainer> videoContainers;
     private String tvChannelURL;
     private String tvChannelName;
     private int[] tvColors;
-
-    private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
-    private TextView mHeaderRecyclerView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +27,8 @@ public class VideolistActivity extends AppCompatActivity {
         setContentView(R.layout.activity_videolist);
         Log.d(TAG, "onCreate: started.");
 
-        if (android.os.Build.VERSION.SDK_INT > 9) {
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-        }
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
         getIncomingIntent();
         initViewHeader(tvChannelName, tvColors);
@@ -60,7 +48,7 @@ public class VideolistActivity extends AppCompatActivity {
     }
 
     private void initViewHeader(String name, int[] colors) {
-        mHeaderRecyclerView = findViewById(R.id.videolist_header);
+        TextView mHeaderRecyclerView = findViewById(R.id.videolist_header);
         mHeaderRecyclerView.setText(name);
         GradientDrawable gradientDrawable = new GradientDrawable(
                 GradientDrawable.Orientation.BOTTOM_TOP,
@@ -71,10 +59,11 @@ public class VideolistActivity extends AppCompatActivity {
     private void initRecyclerViewItems(String url) {
         FeedStreamer feedStreamer = new FeedStreamer(url);
         Log.d(TAG, "initRecyclerViewItems: Connecting to: " + url);
-        videoContainers = feedStreamer.getVideoContainer();
+        //vars
+        ArrayList<VideoContainer> videoContainers = feedStreamer.getVideoContainer();
 
         ArrayList<String> videoTitles = new ArrayList<>();
-        ArrayList<String> videoTumbnails = new ArrayList<>();
+        ArrayList<String> videoThumbnails = new ArrayList<>();
         ArrayList<String> daysElapsed = new ArrayList<>();
         ArrayList<Date> publishedDate = new ArrayList<>();
         ArrayList<Integer> viewsList = new ArrayList<>();
@@ -84,29 +73,30 @@ public class VideolistActivity extends AppCompatActivity {
 
             Log.d(TAG, "initRecyclerViewItems: Video Title: " + video.getTitle());
             videoTitles.add(video.getTitle());
-            videoTumbnails.add(video.getThumbnail());
+            videoThumbnails.add(video.getThumbnail());
             daysElapsed.add(HelperUtilities.getTimePeriodForDaysElapsed(video.getAgeDays()));
             publishedDate.add(video.getPublished());
             viewsList.add(video.getViews());
             videoIDs.add(video.getVideoID());
             videoSummaries.add(video.getSummary());
         }
-        initRecyclerView(videoTitles, videoTumbnails, daysElapsed, publishedDate, viewsList, videoIDs, videoSummaries);
+        initRecyclerView(videoTitles, videoThumbnails, daysElapsed, publishedDate, viewsList, videoIDs, videoSummaries);
     }
 
-    private void initRecyclerView(ArrayList<String> videoTitles, ArrayList<String> videoTumbnails, ArrayList<String> daysElapsed, ArrayList<Date> publishedDate, ArrayList<Integer> viewsList, ArrayList<String> videoIDs, ArrayList<String> videoSummaries) {
+    private void initRecyclerView(ArrayList<String> videoTitles, ArrayList<String> videoThumbnails, ArrayList<String> daysElapsed, ArrayList<Date> publishedDate, ArrayList<Integer> viewsList, ArrayList<String> videoIDs, ArrayList<String> videoSummaries) {
         Log.d(TAG, "initRecyclerView: init recyclerview.");
 
-        mAdapter = new RecyclerViewAdapter(this, videoTitles, videoTumbnails, daysElapsed, publishedDate, viewsList, videoIDs, videoSummaries, tvChannelName, tvColors);
+        RecyclerView.Adapter<RecyclerViewAdapter.VideoItemViewHolder> mAdapter = new RecyclerViewAdapter(this, videoTitles, videoThumbnails, daysElapsed, publishedDate, viewsList, videoIDs, videoSummaries, tvChannelName, tvColors);
 
         // Add recycler view
-        mRecyclerView = findViewById(R.id.recycler_view);
-        mLayoutManager = new LinearLayoutManager(this);
+        RecyclerView mRecyclerView = findViewById(R.id.recycler_view);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
 
         // Add translucent layer to background
+        int BG_OPACITY_ALPHA = 30;
         mRecyclerView.setBackgroundColor(ColorUtils.setAlphaComponent(tvColors[0], BG_OPACITY_ALPHA));
     }
 }

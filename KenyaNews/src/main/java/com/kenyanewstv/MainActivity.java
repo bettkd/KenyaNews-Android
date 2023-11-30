@@ -4,23 +4,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
-
-import java.util.ArrayList;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
-
     private static final String TAG = "MainActivity";
-
     private ArrayList<TVContainer> tvContainers;
-
     private CardView cardView;
     private Context context;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d(TAG, "onCreate: started.");
 
-        tvContainers = TVAdapter.initalizeTVContainers();
+        tvContainers = TVAdapter.initializeTVContainers();
         addListenerOnCard();
     }
 
@@ -60,19 +55,15 @@ public class MainActivity extends AppCompatActivity {
 
             context = cardView.getContext();
 
-            cardView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View arg0) {
-                    //Toast.makeText(MainActivity.this, "CardView is clicked!", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(MainActivity.this, tvContainer.getName(), Toast.LENGTH_SHORT).show();
+            cardView.setOnClickListener(v -> {
+                Toast.makeText(MainActivity.this, tvContainer.getName(), Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(context, VideolistActivity.class);
-                    intent.putExtra("name", tvContainer.getName());
-                    intent.putExtra("url", tvContainer.getUrl());
-                    intent.putExtra("colors", tvContainer.getColors());
-                    intent.putExtra("thumbnail", tvContainer.getThumbnail());
-                    context.startActivity(intent);
-                }
+                Intent intent = new Intent(context, VideoListActivity.class);
+                intent.putExtra("name", tvContainer.getName());
+                intent.putExtra("url", tvContainer.getUrl());
+                intent.putExtra("colors", tvContainer.getColors());
+                intent.putExtra("thumbnail", tvContainer.getThumbnail());
+                context.startActivity(intent);
             });
         }
     }

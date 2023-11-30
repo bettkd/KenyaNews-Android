@@ -15,23 +15,22 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 import java.util.Date;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.VideoItemViewHolder> {
-
     private static final String TAG = "RecyclerViewAdapter";
-    private ArrayList<String> mVideoTitles;
-    private ArrayList<String> mThumbnails;
-    private ArrayList<String> mDaysElapsed;
-    private ArrayList<Date> mPublishedDate;
-    private ArrayList<Integer> mViewsList;
-    private ArrayList<String> mVideoIDs;
-    private ArrayList<String> mVideoSummaries;
-    private String mTVChannelName;
-    private int[] mTVColors;
-
-    private Context mContext;
+    private final ArrayList<String> mVideoTitles;
+    private final ArrayList<String> mThumbnails;
+    private final ArrayList<String> mDaysElapsed;
+    private final ArrayList<Date> mPublishedDate;
+    private final ArrayList<Integer> mViewsList;
+    private final ArrayList<String> mVideoIDs;
+    private final ArrayList<String> mVideoSummaries;
+    private final String mTVChannelName;
+    private final int[] mTVColors;
+    private final Context mContext;
 
     public RecyclerViewAdapter(Context context, ArrayList<String> videoTitles, ArrayList<String> thumbnails, ArrayList<String> daysElapsed, ArrayList<Date> publishedDate, ArrayList<Integer> views, ArrayList<String> videoIDs, ArrayList<String> videoSummaries, String tvChannelName, int[] tvColors) {
         this.mVideoTitles = videoTitles;
@@ -46,11 +45,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         this.mTVColors = tvColors;
     }
 
+    @NonNull
     @Override
     public VideoItemViewHolder onCreateViewHolder(ViewGroup parent, int i) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_videoitem, parent, false);
-        VideoItemViewHolder viewHolder = new VideoItemViewHolder(view);
-        return viewHolder;
+        return new VideoItemViewHolder(view);
     }
 
     @Override
@@ -67,24 +66,21 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         viewHolder.daysElapsed.setText(mDaysElapsed.get(i));
 
         //Click events
-        viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG, "onClick: clicked on: " + mVideoTitles.get(i));
+        viewHolder.parentLayout.setOnClickListener(v -> {
+            Log.d(TAG, "onClick: clicked on: " + mVideoTitles.get(i));
 
-                Toast.makeText(mContext, mVideoTitles.get(i), Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, mVideoTitles.get(i), Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(mContext, VideoplayerActivity.class);
-                intent.putExtra("tvChannelName", mTVChannelName);
-                intent.putExtra("tvColors", mTVColors);
-                intent.putExtra("title", mVideoTitles.get(i));
-                intent.putExtra("views", mViewsList.get(i));
-                intent.putExtra("daysElapsed", mDaysElapsed.get(i));
-                intent.putExtra("publishedDate", mPublishedDate.get(i).getTime());
-                intent.putExtra("videoID", mVideoIDs.get(i));
-                intent.putExtra("videoSummary", mVideoSummaries.get(i));
-                mContext.startActivity(intent);
-            }
+            Intent intent = new Intent(mContext, VideoPlayerActivity.class);
+            intent.putExtra("tvChannelName", mTVChannelName);
+            intent.putExtra("tvColors", mTVColors);
+            intent.putExtra("title", mVideoTitles.get(i));
+            intent.putExtra("views", mViewsList.get(i));
+            intent.putExtra("daysElapsed", mDaysElapsed.get(i));
+            intent.putExtra("publishedDate", mPublishedDate.get(i).getTime());
+            intent.putExtra("videoID", mVideoIDs.get(i));
+            intent.putExtra("videoSummary", mVideoSummaries.get(i));
+            mContext.startActivity(intent);
         });
     }
 
@@ -93,7 +89,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return mVideoTitles.size();
     }
 
-    public class VideoItemViewHolder extends RecyclerView.ViewHolder {
+    public static class VideoItemViewHolder extends RecyclerView.ViewHolder {
         CircleImageView thumbnail;
         TextView videoTitle;
         TextView daysElapsed;

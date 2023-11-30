@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".VideoplayerActivity">
+    tools:context=".VideoPlayerActivity">
 
     <TextView
         android:id="@+id/videoplayer_header"
@@ -63,7 +63,7 @@
             android:layout_marginRight="10dp"
             android:contentDescription="TODO"
             android:src="@drawable/ic_share_icon_24dp"
-            android:tint="#679" />
+            app:tint="#679" />
 
         <TextView
             android:id="@+id/videoplayer_viewcount"
@@ -105,7 +105,7 @@
             android:layout_marginTop="46dp"
             android:layout_marginRight="12dp"
             android:text="Share"
-            android:textSize="10sp" />
+            android:textSize="11sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"

@@ -6,7 +6,7 @@ public class TVAdapter {
 
     private static final String BASE_CHANNEL_URL = "https://www.youtube.com/feeds/videos.xml?channel_id=";
 
-    public static ArrayList<TVContainer> initalizeTVContainers() {
+    public static ArrayList<TVContainer> initializeTVContainers() {
         ArrayList<TVContainer> tvContainers = new ArrayList<>();
         tvContainers.add(new TVContainer("NTV News", BASE_CHANNEL_URL + "UCqBJ47FjJcl61fmSbcadAVg", new int[]{0xF11B95C9, 0xF172BBF8}, ""));
         tvContainers.add(new TVContainer("KTN News", BASE_CHANNEL_URL + "UCKVsdeoHExltrWMuK0hOWmg", new int[]{0xF1005988, 0xF16FCAFB}, ""));

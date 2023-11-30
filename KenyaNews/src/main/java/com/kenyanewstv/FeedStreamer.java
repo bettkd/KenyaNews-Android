@@ -10,22 +10,19 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 public class FeedStreamer {
-
     // Instance Variables
     private ArrayList<VideoContainer> videoContainer;
-
     // Class Variables
-    private String urlString = null;
-    private XmlPullParserFactory xmlFactoryObject;
+    private String urlString;
 
     // Constructors
     public FeedStreamer(String url) {
         this.urlString = url;
         this.videoContainer = new ArrayList<>();
         this.fetchVideos();
-        //System.out.println(videoContainer.get(1).getTitle() + "555555");
     }
 
     public ArrayList<VideoContainer> getVideoContainer() {
@@ -48,8 +45,6 @@ public class FeedStreamer {
             while (event != XmlPullParser.END_DOCUMENT) {
                 String name = myParser.getName();
                 switch (event) {
-                    case XmlPullParser.START_TAG:
-                        break;
                     case XmlPullParser.TEXT:
                         text = myParser.getText();
                         break;
@@ -64,7 +59,7 @@ public class FeedStreamer {
                             video_container.setThumbnail(imgURL);
                         } else if (name.equals("published")) {
 
-                            DateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZZZ");
+                            DateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZZZ", Locale.US);
                             Date published = inputFormat.parse(text);
                             video_container.setPublished(published);
                             int age = (int) (new Date().getTime() - published.getTime()) / (1000 * 60 * 60 * 24);
@@ -73,7 +68,6 @@ public class FeedStreamer {
                             video_container.setVideoID(text);
                         } else if (name.equals("media:statistics")) {
                             video_container.setViews(Integer.parseInt(myParser.getAttributeValue(null, "views")));
-                        } else if (name.equals("entry")) {
                         }
                         break;
                     default:
@@ -81,8 +75,6 @@ public class FeedStreamer {
                 }
                 if (video_container.getViews() != -1) {
                     this.setChannelVideo(video_container);
-                    //System.out.println(video_container.getTitle());
-                    //System.out.println(video_container.getViews());
                     video_container = new VideoContainer();
                 }
                 event = myParser.next();
@@ -104,7 +96,7 @@ public class FeedStreamer {
             connect.connect();
 
             InputStream stream = connect.getInputStream();
-            xmlFactoryObject = XmlPullParserFactory.newInstance();
+            XmlPullParserFactory xmlFactoryObject = XmlPullParserFactory.newInstance();
             XmlPullParser myParser = xmlFactoryObject.newPullParser();
             myParser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
             myParser.setInput(stream, null);

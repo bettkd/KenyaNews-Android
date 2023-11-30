@@ -1,5 +1,7 @@
 package com.kenyanewstv;
 
+import androidx.annotation.NonNull;
+
 import java.util.Date;
 import java.util.Objects;
 
@@ -88,6 +90,7 @@ public class VideoContainer {
         this.views = views;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "VideoContainer{" +

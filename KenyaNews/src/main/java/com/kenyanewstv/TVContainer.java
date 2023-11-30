@@ -1,5 +1,7 @@
 package com.kenyanewstv;
 
+import androidx.annotation.NonNull;
+
 import java.util.Arrays;
 import java.util.Objects;
 
@@ -51,6 +53,7 @@ public class TVContainer {
         this.thumbnail = thumbnail;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "TVContainer{" +

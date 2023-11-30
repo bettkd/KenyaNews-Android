@@ -7,15 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
-
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerListener;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.options.IFramePlayerOptions;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.utils.YouTubePlayerUtils;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.ColorUtils;
@@ -23,24 +16,16 @@ import androidx.core.graphics.ColorUtils;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.options.IFramePlayerOptions;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.utils.YouTubePlayerUtils;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
-public class VideoplayerActivity extends AppCompatActivity {
-
-    private static final String TAG = "VideoplayerActivity";
-    private static final String API_KEY = "AIzaSyBkIYCYIUozVohExwejbRadP4Mq-LA5ovc";
+public class VideoPlayerActivity extends AppCompatActivity {
+    private static final String TAG = "VideoPlayerActivity";
     private static final int BG_OPACITY_ALPHA = 30;
-
-    // Components
-    private TextView headerRecyclerView;
-    private ConstraintLayout parentLayout;
-    private TextView videoTitle;
-    private TextView videoViewCount;
-    private TextView videoSummary;
-    private ImageView shareVideo;
-    private TextView publishedDate;
-    private AdView mAdView;
 
     // Vars
     private String mTVChannelName;
@@ -141,12 +126,9 @@ public class VideoplayerActivity extends AppCompatActivity {
 
 
         // Implement Ad banner
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-                    @Override
-                    public void onInitializationComplete(InitializationStatus initializationStatus) {
-                    }
-                });
-        mAdView = findViewById(R.id.adView);
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+        AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
     }
@@ -172,7 +154,8 @@ public class VideoplayerActivity extends AppCompatActivity {
     }
 
     private void initViewHeader(String name, int[] colors) {
-        headerRecyclerView = findViewById(R.id.videoplayer_header);
+        // Components
+        TextView headerRecyclerView = findViewById(R.id.videoplayer_header);
         headerRecyclerView.setText(name);
         GradientDrawable gradientDrawable = new GradientDrawable(
                 GradientDrawable.Orientation.BOTTOM_TOP,
@@ -180,24 +163,24 @@ public class VideoplayerActivity extends AppCompatActivity {
         headerRecyclerView.setBackground(gradientDrawable);
     }
     private void initVideoPlayerViewContent() {
-        parentLayout = findViewById(R.id.videoplayer_parentlayout);
+        ConstraintLayout parentLayout = findViewById(R.id.videoplayer_parentlayout);
         parentLayout.setBackgroundColor(ColorUtils.setAlphaComponent(mTVColors[0], BG_OPACITY_ALPHA));
 
-        videoTitle = findViewById(R.id.videoplayer_title);
-        videoViewCount = findViewById(R.id.videoplayer_viewcount);
-        publishedDate = findViewById(R.id.videoplayer_publisheddate);
-        videoSummary = findViewById(R.id.videoplayer_summary);
+        TextView videoTitle = findViewById(R.id.videoplayer_title);
+        TextView videoViewCount = findViewById(R.id.videoplayer_viewcount);
+        TextView publishedDate = findViewById(R.id.videoplayer_publisheddate);
+        TextView videoSummary = findViewById(R.id.videoplayer_summary);
 
         videoTitle.setText(mVideoTitle);
         videoViewCount.setText(HelperUtilities.pluralizeItem(mViews, "view"));
         publishedDate.setText(mPublishedDate);
         videoSummary.setText(mVideoSummary);
 
-        shareVideo = findViewById(R.id.share_video);
+        ImageView shareVideo = findViewById(R.id.share_video);
         shareVideo.setOnClickListener(new View.OnClickListener() {
-            String base_url = "https://www.youtube.com/watch?v=";
-            String subject = "Sharing news from " + mTVChannelName;
-            String message = mVideoTitle +
+            final String base_url = "https://www.youtube.com/watch?v=";
+            final String subject = "Sharing news from " + mTVChannelName;
+            final String message = mVideoTitle +
                     "\nLink: "
                     + base_url + mVideoID +
                     "\n\n- #KenyaNewsTV android app.";
