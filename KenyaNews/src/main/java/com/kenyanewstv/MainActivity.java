@@ -49,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
                 case "KBC News":
                     cardView = findViewById(R.id.kbc);
                     break;
+                case "Spice FM":
+                    cardView = findViewById(R.id.spicefm);
+                    break;
+                case "Kenya Digital News":
+                    cardView = findViewById(R.id.kenya_digital);
+                    break;
                 default:
                     break;
             }

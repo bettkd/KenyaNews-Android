@@ -14,6 +14,10 @@ import androidx.core.graphics.ColorUtils;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 public class VideoListActivity extends AppCompatActivity {
     private static final String TAG = "VideoListActivity";
 
@@ -33,6 +37,13 @@ public class VideoListActivity extends AppCompatActivity {
         getIncomingIntent();
         initViewHeader(tvChannelName, tvColors);
         initRecyclerViewItems(tvChannelURL);
+
+        // Implement Ad banner
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+        AdView mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     private void getIncomingIntent() {

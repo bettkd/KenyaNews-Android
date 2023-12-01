@@ -2,6 +2,7 @@
 <project version="4">
   <component name="AnalysisUIOptions">
     <option name="ANALYZE_INJECTED_CODE" value="false" />
+    <option name="SCOPE_TYPE" value="4" />
   </component>
   <component name="AndroidConfiguredLogFilters">
     <filters>
@@ -28,9 +29,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bd072fe-2297-4ca4-99eb-2cf114657b85" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/drawable/kenya_digital.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/drawable/spicefm.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KenyaNews/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenyaNews/release/KenyaNews-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/release/KenyaNews-release.aab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/FeedStreamer.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/FeedStreamer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/TVAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/TVAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideoListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideoListActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideoPlayerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/java/com/kenyanewstv/VideoPlayerActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videolist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videolist.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videoplayer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videoplayer.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +138,7 @@
       <recent name="C:\Users\Dominic_Bett\StudioProjects\KenyaNewsTV\KenyaNews\src\main\res\drawable" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dominic_Bett\OneDrive - Dell Technologies\Desktop\PROJECTS\APP\KenyaNews-Android\KenyaNews\src\main\res\drawable" />
       <recent name="C:\Users\Dominic_Bett\StudioProjects\KenyaNewsTV\KenyaNews\src\main\res\mipmap-xxhdpi" />
       <recent name="C:\Users\Dominic_Bett\StudioProjects\KenyaNewsTV\KenyaNews\src\main\res\mipmap-mdpi" />
       <recent name="C:\Users\Dominic_Bett\StudioProjects\KenyaNewsTV\KenyaNews\src\main\res\drawable" />

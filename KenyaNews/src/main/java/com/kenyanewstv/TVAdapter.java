@@ -14,6 +14,8 @@ public class TVAdapter {
         tvContainers.add(new TVContainer("Citizen TV", BASE_CHANNEL_URL + "UChBQgieUidXV1CmDxSdRm3g", new int[]{0xF1F68220, 0xF1FAB77E}, ""));
         tvContainers.add(new TVContainer("KTN TV", BASE_CHANNEL_URL + "UCkWr5PLM8hp8M4WNIkjpKsQ", new int[]{0xF1005988, 0xF16FCAFB}, ""));
         tvContainers.add(new TVContainer("KBC News", BASE_CHANNEL_URL + "UCypNjM5hP1qcUqQZe57jNfg", new int[]{0xF1870700, 0xF1B77A66}, ""));
+        tvContainers.add(new TVContainer("Spice FM", BASE_CHANNEL_URL + "UC0kFUQNwtbKJlfzTfj4x4YQ", new int[]{0xF1FE7E01, 0xF1FEB166}, ""));
+        tvContainers.add(new TVContainer("Kenya Digital News", BASE_CHANNEL_URL + "UC6QjtrmjCTrDFGG62GE4KZQ", new int[]{0xF1C9351B, 0xF1E36352}, ""));
         return tvContainers;
     }
 }

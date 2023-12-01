@@ -14,9 +14,9 @@ import java.util.Locale;
 
 public class FeedStreamer {
     // Instance Variables
-    private ArrayList<VideoContainer> videoContainer;
+    private final ArrayList<VideoContainer> videoContainer;
     // Class Variables
-    private String urlString;
+    private final String urlString;
 
     // Constructors
     public FeedStreamer(String url) {
