@@ -36,7 +36,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bd072fe-2297-4ca4-99eb-2cf114657b85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/drawable/ic_arrow_back_1024dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/client_secret.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/drawable/ic_arrow_back_24dp.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -50,6 +51,7 @@
       <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videolist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videolist.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videoplayer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/layout/activity_videoplayer.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KenyaNews/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KenyaNews/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

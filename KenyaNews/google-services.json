@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "646862525732",
+    "project_id": "kenya-news-android-app",
+    "storage_bucket": "kenya-news-android-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646862525732:android:0cbb772938d5fd2dea4fb1",
+        "android_client_info": {
+          "package_name": "com.kenyanewstv"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARhA3fWjp3WAfsN-gb7KoTB36xyJlrjSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,7 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp"
     android:height="24dp"
+    android:opticalInsetBottom="@dimen/cardview_compat_inset_shadow"
     android:viewportWidth="1024"
     android:tint="#FFFFFFFF"
     android:viewportHeight="1024">

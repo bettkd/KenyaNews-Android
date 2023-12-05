@@ -24,7 +24,7 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center|start"
-        android:background="@drawable/ic_arrow_back_1024dp"
+        android:background="@drawable/ic_arrow_back_24dp"
         tools:layout_editor_absoluteY="8dp" />
     <TextView
         android:id="@+id/videolist_header"
