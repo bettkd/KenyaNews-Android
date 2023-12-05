@@ -12,36 +12,28 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.VideoItemViewHolder> {
     private static final String TAG = "RecyclerViewAdapter";
-    private final ArrayList<String> mVideoTitles;
-    private final ArrayList<String> mThumbnails;
-    private final ArrayList<String> mDaysElapsed;
-    private final ArrayList<Date> mPublishedDate;
-    private final ArrayList<Integer> mViewsList;
-    private final ArrayList<String> mVideoIDs;
-    private final ArrayList<String> mVideoSummaries;
+    private final ArrayList<VideoContainer> mVideos;
     private final String mTVChannelName;
+    private final String mTVChannelURL;
     private final int[] mTVColors;
     private final Context mContext;
 
-    public RecyclerViewAdapter(Context context, ArrayList<String> videoTitles, ArrayList<String> thumbnails, ArrayList<String> daysElapsed, ArrayList<Date> publishedDate, ArrayList<Integer> views, ArrayList<String> videoIDs, ArrayList<String> videoSummaries, String tvChannelName, int[] tvColors) {
-        this.mVideoTitles = videoTitles;
-        this.mThumbnails = thumbnails;
-        this.mDaysElapsed = daysElapsed;
-        this.mPublishedDate = publishedDate;
-        this.mViewsList = views;
-        this.mVideoIDs = videoIDs;
-        this.mVideoSummaries = videoSummaries;
+    public RecyclerViewAdapter(Context context, ArrayList<VideoContainer> videos, String tvChannelName, String tvChannelURL, int[] tvColors) {
+        this.mVideos = videos;
         this.mContext = context;
         this.mTVChannelName = tvChannelName;
+        this.mTVChannelURL = tvChannelURL;
         this.mTVColors = tvColors;
     }
 
@@ -59,34 +51,32 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         //Thumbnails
         Glide.with(mContext)
                 .asBitmap()
-                .load(mThumbnails.get(i))
+                .load(mVideos.get(i).getThumbnail())
                 .into(viewHolder.thumbnail);
-        viewHolder.videoTitle.setText(mVideoTitles.get(i));
-        viewHolder.views.setText(HelperUtilities.pluralizeItem(mViewsList.get(i), "view"));
-        viewHolder.daysElapsed.setText(mDaysElapsed.get(i));
+        viewHolder.videoTitle.setText(mVideos.get(i).getTitle());
+        viewHolder.views.setText(HelperUtilities.pluralizeItem(mVideos.get(i).getViews(), "view"));
+        viewHolder.daysElapsed.setText(HelperUtilities.getTimePeriodForDaysElapsed(mVideos.get(i).getAgeDays()));
 
         //Click events
         viewHolder.parentLayout.setOnClickListener(v -> {
-            Log.d(TAG, "onClick: clicked on: " + mVideoTitles.get(i));
+            Log.d(TAG, "onClick: clicked on: " + mVideos.get(i).getTitle());
 
-            Toast.makeText(mContext, mVideoTitles.get(i), Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, mVideos.get(i).getTitle(), Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(mContext, VideoPlayerActivity.class);
             intent.putExtra("tvChannelName", mTVChannelName);
+            intent.putExtra("tvChannelURL", mTVChannelURL);
             intent.putExtra("tvColors", mTVColors);
-            intent.putExtra("title", mVideoTitles.get(i));
-            intent.putExtra("views", mViewsList.get(i));
-            intent.putExtra("daysElapsed", mDaysElapsed.get(i));
-            intent.putExtra("publishedDate", mPublishedDate.get(i).getTime());
-            intent.putExtra("videoID", mVideoIDs.get(i));
-            intent.putExtra("videoSummary", mVideoSummaries.get(i));
+            intent.putExtra("currentVideo", mVideos.get(i));
+            ArrayList<VideoContainer> relatedVideos = HelperUtilities.sortVideosByViewsDesc(mVideos);
+            intent.putExtra("relatedVideos", relatedVideos);
             mContext.startActivity(intent);
         });
     }
 
     @Override
     public int getItemCount() {
-        return mVideoTitles.size();
+        return mVideos.size();
     }
 
     public static class VideoItemViewHolder extends RecyclerView.ViewHolder {

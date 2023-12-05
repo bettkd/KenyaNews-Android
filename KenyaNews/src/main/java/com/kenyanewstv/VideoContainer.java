@@ -2,10 +2,11 @@ package com.kenyanewstv;
 
 import androidx.annotation.NonNull;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
-public class VideoContainer {
+public class VideoContainer implements Serializable {
     private String title;
     private String summary;
     private String thumbnail;

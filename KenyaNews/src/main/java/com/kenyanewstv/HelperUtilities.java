@@ -1,8 +1,14 @@
 package com.kenyanewstv;
 
+import android.content.Context;
+import android.util.Log;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.Locale;
 
@@ -63,5 +69,27 @@ public class HelperUtilities {
         toReturn = inputFormat.format(date);
 
         return toReturn;
+    }
+
+    public static String getShortDateFromLongDate(Date longDate) {
+        String toReturn;
+        DateFormat inputFormat = new SimpleDateFormat("MMM dd, yyyy", Locale.US);
+        toReturn = inputFormat.format(longDate);
+
+        return toReturn;
+    }
+
+    public static ArrayList<VideoContainer> sortVideosByViewsDesc(ArrayList<VideoContainer> videos) {
+        ArrayList<VideoContainer> toReturn = new ArrayList<>(videos);
+
+        Collections.sort(toReturn, Comparator.comparingInt(VideoContainer::getViews));
+        Collections.reverse(toReturn);
+        return toReturn;
+    }
+
+    public static int convertDimensionFromDP(Context context, int dps) {
+        float pixel_density = context.getResources().getDisplayMetrics().density;
+        int pixels = (int) (pixel_density * dps * 0.5f);
+        return pixels;
     }
 }

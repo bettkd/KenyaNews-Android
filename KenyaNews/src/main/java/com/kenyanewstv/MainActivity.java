@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private ArrayList<TVContainer> tvContainers;
     private CardView cardView;
-    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,17 +58,14 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
 
-            context = cardView.getContext();
-
             cardView.setOnClickListener(v -> {
-                Toast.makeText(MainActivity.this, tvContainer.getName(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, tvContainer.getName(), Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(context, VideoListActivity.class);
+                Intent intent = new Intent(this, VideoListActivity.class);
                 intent.putExtra("name", tvContainer.getName());
                 intent.putExtra("url", tvContainer.getUrl());
                 intent.putExtra("colors", tvContainer.getColors());
-                intent.putExtra("thumbnail", tvContainer.getThumbnail());
-                context.startActivity(intent);
+                this.startActivity(intent);
             });
         }
     }
